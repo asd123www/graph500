@@ -1,0 +1,29 @@
+Round: 0, pts: 2
+Round: 1, pts: 13643
+Round: 2, pts: 145566
+Round: 3, pts: 14315
+Round: 4, pts: 58
+Round: 5, pts: 0
+
+Round: 0, pts: 1
+Round: 1, pts: 2
+Round: 2, pts: 4455
+Round: 3, pts: 139043
+Round: 4, pts: 29919
+Round: 5, pts: 164
+Round: 6, pts: 0
+
+Round: 0, pts: 1
+Round: 1, pts: 63
+Round: 2, pts: 46766
+Round: 3, pts: 123172
+Round: 4, pts: 3568
+Round: 5, pts: 14
+Round: 6, pts: 0
+
+Round: 0, pts: 3
+Round: 1, pts: 4577
+Round: 2, pts: 138609
+Round: 3, pts: 30241
+Round: 4, pts: 154
+Round: 5, pts: 0

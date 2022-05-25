@@ -1,0 +1,201 @@
+Graph500 Benchmark: MPI Reference Implementation (BFS and SSSP kernels) 
+Version 3.0.0rc1 
+Jeremiah Willcock and Andrew Lumsdaine, Anton Korzh
+
+This directory contains an MPI-based reference implementation for the Graph500
+benchmark.  The Makefile will automatically build the supporting code, along
+with two reference implementations one doing both breadth-first search and
+single source shortest path, other just doing BFS.
+
+Makefile may need to be modified with your MPI location and compiler flags.
+The generated programs, named graph500_mpi_*, take up to two parameters: the
+scale of the problem and the edge factor.  The problem scale is the logarithm,
+base 2, of the number of vertices in the graph; only graphs with power-of-2
+vertex counts are supported without source code modification.  The edge factor
+is the ratio of the number of edges to the number of vertices; i.e., it is half
+the average vertex degree in the graph.  The scale parameter is mandatory; the
+edge factor is optional and defaults to 16 (the value specified by the
+benchmark).  Running any of the graph500_* programs without any arguments will
+produce a usage message.
+
+The raw graph tuples produced by the graph generator can be stored either in
+memory or in a file (using MPI file I/O).  If the TMPFILE environment variable
+is set, it should point to a filename (in the sense of section 13.2.1 of the
+MPI 2.2 standard) whose corresponding file does not exist and which points to a
+filesystem that is globally accessible and consistent on all ranks and has
+enough storage space for the graph data.  The amount of space required is given
+in <URL:http://www.graph500.org/Specifications.html#tbl:classes> or can be
+computed as 256*(2**SCALE) bytes.  If GENERATOR_USE_PACKED_EDGE_TYPE is
+#define'd in ../generator/user_settings.h, the space required is reduced to
+192*(2**SCALE) bytes. The bfs-sssp binary will also produce a separate weights
+file whose name would be TMPFILE appended by ".weights".  Edges file is exactly
+the same as it was for reference 2.1.4.  In case edges file is present but no
+weights file exists both would be recreated.
+
+The code is written in C; the code compiles with GCC's default gnu89 language
+setting, but should be valid C99 and C++ (except for the use of a few C99
+headers).  The main non-C89 features used are variable declarations after
+statements in a block and the <stdint.h> and <inttypes.h> headers.  The code
+assumes that your MPI implementation is compliant with version 3.0 of the MPI
+standard; it uses some MPI non-blocking collectives not present in MPI 2.*. All
+communication is implemented through AML (Active Messages Library) which
+implements asynchronous active messages and implements transparent message
+coalescing (or aggregation) and software two-step routing for efficient
+performance of modern multicore nodes. No need of using OpenMP or Hybrid mode.
+
+
+A template for writing your own BFS using the reference data structures and
+infrastructure is in bfs_custom.c.  You can either modify that file in place or
+copy it (adjusting the Makefile) to create your own version.  The documentation
+for what data structures are available and how to use them is in comments in
+bfs_custom.c.  The reference implementation also contains code to convert from
+a distributed list of graph edges into a distributed compressed sparse row data
+structure, as well as code for timing the BFS run, validating the correctness
+of the results, and printing the timings in the Graph500-required format.
+
+
+------------------------------------------------------------------------ 
+Flags and variables:
+
+- compiling without SSSP macro defined build only BFS code
+- compiling with SSSP macro defined build code which runs BFS and then SSSP
+- for latter its possible do skip BFS by having env variable SKIP_BFS
+- Validation can be skipped by having env variable SKIP_VALIDATION, but given
+  new validation is much faster,less memory consuming (its only 30% slower then
+BFS run and faster then SSSP run ) its recommended to have validation always
+enabled, unless you really need all your memory for BFS/SSSP run
+- macro REUSE_CSR_FOR_VALIDATION if enabled would reuse reference CSR generated
+  by kernel 1 convert for validation thus greatly saving memory (validation
+would require almost no additional memory to proceed, otherwise it builds it's
+own reference CRS)
+- macro DEBUGSTATS when enabled gives nice information about the traversed
+  graph levels
+
+Troubleshooting:
+
+-If number of processes per node is not a power of 2 you would have to add
+macro definition -DPROCS_PER_NODE_NOT_POWER_OF_TWO to CFLAGS in a src/Makefile. 
+Macro SIZE_MUST_BE_A_POWER_OF_TWO would be undefined automatically. Experiments
+normally give better performance if you use power of twos: using 16 cores on 24-core
+node is always faster.
+
+-If you are running on non-power of two of nodes, you would need to comment out
+definition of a macro SIZE_MUST_BE_A_POWER_OF_TWO in common.h. But beware it's
+known that running on a non power of two nodes slows you down by ~20%
+
+- AML is using decent amount of memory per node for message coalescing.  If
+  thats a problem for your machine you should reduce AGGR macro in aml/aml.c
+Memory consumed by those buffers is NNODES*NPESPERNODE*AGGR on each node, so
+its NPES*AGGR for whatever NPESPERNODE you having.  .So if you are running 8192
+processes it would allocate currently 256 MB per node, for 32768 processes it
+would be 1GB per node. For 128k processes total it would be 4GB per node.  So
+you dont need to touch that parameter unless you have a really big machine,
+which hopefully has nice custom interconnect and smaller buffers would work
+fine for you.  Default paramters work well both on slow Ethernets and old and
+new Infinibands.
+------------------------------------------------------------------------
+
+
+Graph500基准测试：MPI参考实现（BFS和SSSP内核）
+版本3.0.0rc1
+耶利米·威尔考克（Jeremiah Willcock）和安德鲁·鲁姆斯达（Andrew Lumsdaine），安东·科尔兹（Anton Korzh）
+
+该目录包含Graph500的基于MPI的参考实现
+基准。 Makefile会自动构建支持代码，以及
+有两种参考实现，一种既进行广度优先搜索，又进行
+单源最短路径，其他仅做BFS。
+
+Makefile可能需要使用MPI位置和编译器标志进行修改。
+生成的名为graph500_mpi_ *的程序最多包含两个参数：
+问题的规模和边缘因素。问题规模是对数，
+图中顶点数的基数2；仅具有2的幂的图
+支持顶点计数，无需修改源代码。边缘因素
+是边数与顶点数之比；即一半
+图中的平均顶点度。标尺参数为必填项；这
+边缘因子是可选的，默认为16（由
+基准）。运行不带任何参数的任何graph500_ *程序将
+产生使用信息。
+
+图生成器生成的原始图元组可以存储在
+内存或文件中（使用MPI文件I / O）。如果TMPFILE环境变量
+被设置，它应该指向一个文件名（在第13.2.1节的意义上
+MPI 2.2标准），其相应的文件不存在，并且指向
+全局可访问且在所有级别上均一致的文件系统，并具有
+图数据的足够存储空间。所需的空间量已给出
+在<URL：http：//www.graph500.org/Specifications.html#tbl：classes>中或者可以是
+计算为256 *（2 ** SCALE）个字节。如果GENERATOR_USE_PACKED_EDGE_TYPE为
+＃.define在../generator/user_settings.h中，所需空间减少到
+192 *（2 ** SCALE）个字节。 bfs-sssp二进制文件也将产生单独的权重
+名称为TMPFILE并附加“ .weights”的文件。边缘文件正好
+与参考2.1.4相同。如果边缘文件存在但不存在
+weights文件同时存在将被重新创建。
+
+该代码是用C编写的；该代码使用GCC的默认gnu89语言进行编译
+设置，但应该是有效的C99和C ++（除了少数几个C99的使用）
+标头）。非C89的主要功能是在变量之后声明
+语句和<stdint.h>和<inttypes.h>标头。编码
+假定您的MPI实现与MPI 3.0版兼容
+标准;它使用了一些MPI 2 *中没有的MPI非阻塞集合。全部
+通信是通过AML（活动消息库）实现的，
+实现异步活动消息并实现透明消息
+合并（或聚合）和软件两步路由以提高效率
+现代多核节点的性能。无需使用OpenMP或混合模式。
+
+
+使用参考数据结构编写自己的BFS的模板
+基础结构位于bfs_custom.c中。您可以就地修改该文件，也可以
+复制它（调整Makefile）以创建自己的版本。该文件
+有关哪些数据结构可用以及如何使用的信息，请参见注释
+bfs_custom.c。参考实现还包含要从中转换的代码
+图边缘的分布式列表到分布式压缩稀疏行数据中
+结构，以及用于计时BFS运行，验证正确性的代码
+结果，并以Graph500要求的格式打印计时。
+
+
+
+
+
+
+标志和变量：
+
+-编译时未定义SSSP宏，仅编译BFS代码
+-使用SSSP宏定义的构建代码进行编译，该构建代码先运行BFS，然后运行SSSP
+-对于后者，可以通过使用env变量SKIP_BFS来跳过BFS
+-可以通过包含环境变量SKIP_VALIDATION来跳过验证，但是给定
+  新的验证速度更快，内存消耗更少（仅比之前慢30％
+BFS运行速度比SSSP运行速度更快）建议始终进行验证
+启用，除非您确实需要所有内存才能运行BFS / SSSP
+-宏REUSE_CSR_FOR_VALIDATION（如果启用）将重用生成的参考CSR
+  由内核1转换以进行验证，从而大大节省了内存（验证
+将几乎不需要额外的内存来继续进行，否则它将建立它
+自己的参考CRS）
+-启用时，宏DEBUGSTATS会提供有关遍历的详细信息
+  图水平
+
+故障排除：
+
+-如果每个节点的进程数不是2的幂，则必须添加
+宏定义-DPROCS_PER_NODE_NOT_POWER_OF_TWO到src / Makefile中的CFLAGS。
+宏SIZE_MUST_BE_A_POWER_OF_TWO将自动被取消定义。实验
+如果您使用2的幂，通常会提供更好的性能：在24核上使用16核
+节点总是更快。
+
+-如果您在两个节点的非电源上运行，则需要注释掉
+common.h中的宏SIZE_MUST_BE_A_POWER_OF_TWO的定义。但是要当心
+知道在两个节点的非幂上运行会使您的速度降低约20％
+
+-AML在每个节点上使用大量的内存进行消息合并。如果
+  多数民众赞成在您的计算机上的问题，您应该减少aml / aml.c中的AGGR宏
+这些缓冲区消耗的内存在每个节点上为NNODES * NPESPERNODE * AGGR，因此
+无论您拥有哪种NPESPERNODE，都可以使用它的NPES * AGGR。因此，如果您正在运行8192
+进程，它将为每个节点当前分配256 MB，用于32768个进程
+每个节点为1GB。对于总共128k进程，每个节点为4GB。所以
+除非您有一台非常大的机器，否则您无需触摸该参数，
+希望它具有良好的自定义互连，并且较小的缓冲区可以工作
+对你很好。默认参数在慢速以太网以及旧的和旧的以太网上都可以很好地工作
+新的Infinibands。 
+Biāozhì hé biànliàng:
+
+
+
+

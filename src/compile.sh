@@ -1,0 +1,4 @@
+clear
+make clean
+make graph500_custom_bfs
+make graph500_reference_bfs
