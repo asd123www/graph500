@@ -377,6 +377,7 @@ SOATTR void aml_barrier( void ) {
 	int i,flag;
 	MPI_Request hndl;
 	inbarrier++;
+	// 自己这里的都得发出去, 因为为了优化可能batch.
 	//1. flush internode buffers
 	for ( i = 1; i < num_groups; i++ ) {
 		int group=(mygroup+i)%num_groups;

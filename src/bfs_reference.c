@@ -50,10 +50,17 @@ typedef struct visitmsg {
 	int vfrom;
 } visitmsg;
 
+// 统计一下边访问的
+int null_edge_visit;
+int valid_edge_visit;
+
+
 //AM-handler for check&visit
 void visithndl(int from,void* data,int sz) {
 	visitmsg *m = data;
+	++null_edge_visit; // test
 	if (!TEST_VISITEDLOC(m->vloc)) {
+		++ valid_edge_visit; // test
 		SET_VISITEDLOC(m->vloc);
 		q2[q2c++] = m->vloc;
 		pred_glob[m->vloc] = VERTEX_TO_GLOBAL(from,m->vfrom);
@@ -76,7 +83,7 @@ void make_graph_data_structure(const tuple_graph* const tg) {
 	printf("process: %d vertical: %d edge: %d\n", rank, g.nlocalverts, g.nlocaledges);
 
 	visited_size = (g.nlocalverts + ulong_bits - 1) / ulong_bits;
-	aml_register_handler(visithndl,1);
+	aml_register_handler(visithndl,1); // call-back function, 接收到data就调用这个函数.
 	q1 = xmalloc(g.nlocalverts*sizeof(int)); //100% of vertexes
 	q2 = xmalloc(g.nlocalverts*sizeof(int));
 	for(i=0;i<g.nlocalverts;i++) q1[i]=0,q2[i]=0; //touch memory
@@ -88,7 +95,7 @@ void run_bfs(int64_t root, int64_t* pred) {
 	long sum;
 	unsigned int i,j,k,lvl=1;
 	pred_glob=pred;
-	aml_register_handler(visithndl,1);
+	aml_register_handler(visithndl,1); // 第二个参数是type, 我们可以区分不同的message类型AML调用不同的call-back函数.
 
 	// `memset`, 清空visit数组.
 	CLEAN_VISITED();
@@ -109,6 +116,11 @@ void run_bfs(int64_t root, int64_t* pred) {
 
 	while(sum) {
 
+		double start_time = aml_time();
+		null_edge_visit = 0;
+		valid_edge_visit = 0;
+
+
 #ifdef DEBUGSTATS
 		double t0=aml_time();
 		nbytes_sent=0; nbytes_rcvd=0;
@@ -121,12 +133,19 @@ void run_bfs(int64_t root, int64_t* pred) {
 
 		qc=q2c;
 		int *tmp=q1;q1=q2;q2=tmp;
+		
 		sum=qc;
 		aml_long_allsum(&sum); // 通信取得这一层的和
+		aml_long_allsum(&null_edge_visit);
+		aml_long_allsum(&valid_edge_visit);
 
 		nvisited+=sum;
-		if(rank == 0)
-		printf("Round: %d, pts: %d\n", round++, sum);
+		
+		// 输出一些统计信息.
+		if(rank == 0) {
+			printf("Round: %d, pts: %d, time: %.3f\n", round++, sum, aml_time() - start_time);
+			printf("      valid/all: %d/%d \n", valid_edge_visit, null_edge_visit);
+		}
 
 		q2c=0;
 #ifdef DEBUGSTATS

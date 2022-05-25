@@ -1,0 +1,62 @@
+Round: 0, pts: 46, time: 0.000
+      valid/all: 46/46 
+Round: 1, pts: 70030, time: 0.001
+      valid/all: 70030/164371 
+Round: 2, pts: 539775, time: 0.088
+      valid/all: 539775/24615119 
+Round: 3, pts: 35665, time: 0.038
+      valid/all: 35665/8730439 
+Round: 4, pts: 126, time: 0.000
+      valid/all: 126/41535 
+Round: 5, pts: 0, time: 0.000
+      valid/all: 0/126 
+
+
+Round: 0, pts: 36, time: 0.000
+      valid/all: 36/36 
+Round: 1, pts: 45629, time: 0.001
+      valid/all: 45629/88153 
+Round: 2, pts: 548152, time: 0.077
+      valid/all: 548152/21812088 
+Round: 3, pts: 51641, time: 0.049
+      valid/all: 51641/11587297 
+Round: 4, pts: 183, time: 0.000
+      valid/all: 183/63877 
+Round: 5, pts: 1, time: 0.000
+      valid/all: 1/184 
+Round: 6, pts: 0, time: 0.000
+      valid/all: 0/1 
+
+
+Round: 0, pts: 1, time: 0.000
+      valid/all: 1/1 
+Round: 1, pts: 41, time: 0.000
+      valid/all: 41/42 
+Round: 2, pts: 46489, time: 0.001
+      valid/all: 46489/91574 
+Round: 3, pts: 548340, time: 0.077
+      valid/all: 548340/21940524 
+Round: 4, pts: 50575, time: 0.046
+      valid/all: 50575/11456877 
+Round: 5, pts: 195, time: 0.000
+      valid/all: 195/62421 
+Round: 6, pts: 1, time: 0.000
+      valid/all: 1/196 
+Round: 7, pts: 0, time: 0.000
+      valid/all: 0/1 
+
+
+Round: 0, pts: 4, time: 0.000
+      valid/all: 4/4 
+Round: 1, pts: 14665, time: 0.000
+      valid/all: 14665/20103 
+Round: 2, pts: 519794, time: 0.049
+      valid/all: 519794/14111733 
+Round: 3, pts: 110656, time: 0.077
+      valid/all: 110656/19247307 
+Round: 4, pts: 520, time: 0.001
+      valid/all: 520/171963 
+Round: 5, pts: 3, time: 0.000
+      valid/all: 3/523 
+Round: 6, pts: 0, time: 0.000
+      valid/all: 0/3
