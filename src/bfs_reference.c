@@ -119,10 +119,7 @@ void run_bfs(int64_t root, int64_t* pred) {
 		double start_time = aml_time();
 		null_edge_visit = 0;
 		valid_edge_visit = 0;
-
-		for (int i = 0; i < qc; ++i ) printf("%d ", VERTEX_TO_GLOBAL(rank, q1[i]));
-		puts("");
-
+		
 #ifdef DEBUGSTATS
 		double t0=aml_time();
 		nbytes_sent=0; nbytes_rcvd=0;
@@ -157,14 +154,6 @@ void run_bfs(int64_t root, int64_t* pred) {
 #endif
 	}
 	aml_barrier();
-
-	if (rank == 0) {
-		sleep(2);
-	}
-	for (int i = 0; i < g.nlocalverts; ++i) {
-		if (pred_glob[i])
-			printf("%d %d\n", VERTEX_TO_GLOBAL(rank, i), pred_glob[i]);
-	}
 }
 
 

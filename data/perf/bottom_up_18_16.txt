@@ -1,0 +1,29 @@
+Round: 0, pts: 2, time: 0.002
+Round: 1, pts: 13643, time: 0.001
+Round: 2, pts: 145566, time: 0.001
+Round: 3, pts: 14315, time: 0.000
+Round: 4, pts: 58, time: 0.000
+Round: 5, pts: 0, time: 0.000
+
+Round: 0, pts: 1, time: 0.002
+Round: 1, pts: 2, time: 0.002
+Round: 2, pts: 4455, time: 0.002
+Round: 3, pts: 139043, time: 0.001
+Round: 4, pts: 29919, time: 0.000
+Round: 5, pts: 164, time: 0.000
+Round: 6, pts: 0, time: 0.000
+
+Round: 0, pts: 1, time: 0.002
+Round: 1, pts: 63, time: 0.002
+Round: 2, pts: 46766, time: 0.001
+Round: 3, pts: 123172, time: 0.001
+Round: 4, pts: 3568, time: 0.000
+Round: 5, pts: 14, time: 0.000
+Round: 6, pts: 0, time: 0.000
+
+Round: 0, pts: 3, time: 0.002
+Round: 1, pts: 4577, time: 0.002
+Round: 2, pts: 138609, time: 0.001
+Round: 3, pts: 30241, time: 0.000
+Round: 4, pts: 154, time: 0.000
+Round: 5, pts: 0, time: 0.000
