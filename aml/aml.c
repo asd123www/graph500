@@ -24,8 +24,12 @@
 #include <pthread.h>
 
 #define MAXGROUPS 65536		//number of nodes (core processes form a group on a same node)
-#define AGGR (1024*32) //aggregation buffer size per dest in bytes : internode
-#define AGGR_intra (1024*32) //aggregation buffer size per dest in bytes : intranode
+// wrong!!! 我本地做个拆分???
+// #define AGGR (1024*32) //aggregation buffer size per dest in bytes : internode
+#define AGGR (1<<20) //aggregation buffer size per dest in bytes : internode
+// #define AGGR_intra (1024*32) //aggregation buffer size per dest in bytes : intranode
+#define AGGR_intra (1<<20) //aggregation buffer size per dest in bytes : intranode
+
 #define NRECV 4 // number of preposted recvs internode
 #define NRECV_intra 4 // number of preposted recvs intranode
 #define NSEND 4 // number of available sends internode
