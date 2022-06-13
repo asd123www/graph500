@@ -1,0 +1,93 @@
+graph_generation:               10.694475 s
+construction_time:              3.839557 s
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.005
+Round: 2, state: 1, time: 0.031
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 1, time: 0.012
+asd123www: Running BFS 0
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.005
+Round: 2, state: 1, time: 0.031
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 1, time: 0.012
+Time for BFS 0 is 0.093450
+TEPS for BFS 0 is 1.43622e+09
+Validating BFS 0
+Validate time for BFS 0 is 4.029715
+asd123www: Running BFS 1
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.011
+Round: 3, state: 1, time: 0.027
+Round: 4, state: 1, time: 0.015
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 1, time: 0.012
+Round: 7, state: 1, time: 0.012
+Time for BFS 1 is 0.097360
+TEPS for BFS 1 is 1.37853e+09
+Validating BFS 1
+Validate time for BFS 1 is 4.012522
+asd123www: Running BFS 2
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.036
+Round: 3, state: 1, time: 0.021
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 1, time: 0.012
+Time for BFS 2 is 0.098676
+TEPS for BFS 2 is 1.36015e+09
+Validating BFS 2
+Validate time for BFS 2 is 3.906132
+asd123www: Running BFS 3
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.028
+Round: 3, state: 1, time: 0.023
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 1, time: 0.011
+Round: 7, state: 1, time: 0.011
+Time for BFS 3 is 0.109183
+TEPS for BFS 3 is 1.22926e+09
+Validating BFS 3
+Validate time for BFS 3 is 3.830612
+SCALE:                          23
+edgefactor:                     16
+NBFS:                           4
+graph_generation:               10.6945
+num_mpi_processes:              8
+construction_time:              3.83956
+bfs  min_time:                  0.0934496
+bfs  firstquartile_time:        0.0954049
+bfs  median_time:               0.0980179
+bfs  thirdquartile_time:        0.103929
+bfs  max_time:                  0.109183
+bfs  mean_time:                 0.099667
+bfs  stddev_time:               0.00672079
+min_nedge:                      134213828
+firstquartile_nedge:            134213828
+median_nedge:                   134213828
+thirdquartile_nedge:            134213828
+max_nedge:                      134213828
+mean_nedge:                     134213828
+stddev_nedge:                   0
+bfs  min_TEPS:                  1.22926e+09
+bfs  firstquartile_TEPS:        1.2914e+09
+bfs  median_TEPS:               1.36928e+09
+bfs  thirdquartile_TEPS:        1.40678e+09
+bfs  max_TEPS:                  1.43622e+09
+bfs  harmonic_mean_TEPS:     !  1.34662e+09
+bfs  harmonic_stddev_TEPS:      5.24269e+07
+bfs  min_validate:              3.83061
+bfs  firstquartile_validate:    3.86837
+bfs  median_validate:           3.95933
+bfs  thirdquartile_validate:    4.02112
+bfs  max_validate:              4.02971
+bfs  mean_validate:             3.94474
+bfs  stddev_validate:           0.0936855

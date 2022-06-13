@@ -1,0 +1,93 @@
+graph_generation:               36.660969 s
+construction_time:              12.987964 s
+Round: 0, state: 1, time: 0.482
+Round: 1, state: 1, time: 0.277
+Round: 2, state: 1, time: 0.096
+Round: 3, state: 1, time: 0.042
+Round: 4, state: 1, time: 0.028
+Round: 5, state: 1, time: 0.029
+Round: 6, state: 1, time: 0.028
+asd123www: Running BFS 0
+Round: 0, state: 1, time: 0.481
+Round: 1, state: 1, time: 0.277
+Round: 2, state: 1, time: 0.096
+Round: 3, state: 1, time: 0.042
+Round: 4, state: 1, time: 0.029
+Round: 5, state: 1, time: 0.028
+Round: 6, state: 1, time: 0.028
+Time for BFS 0 is 0.982474
+TEPS for BFS 0 is 1.36608e+08
+Validating BFS 0
+Validate time for BFS 0 is 11.805946
+asd123www: Running BFS 1
+Round: 0, state: 1, time: 0.482
+Round: 1, state: 1, time: 0.479
+Round: 2, state: 1, time: 0.216
+Round: 3, state: 1, time: 0.083
+Round: 4, state: 1, time: 0.037
+Round: 5, state: 1, time: 0.029
+Round: 6, state: 1, time: 0.028
+Round: 7, state: 1, time: 0.029
+Time for BFS 1 is 1.383869
+TEPS for BFS 1 is 9.69845e+07
+Validating BFS 1
+Validate time for BFS 1 is 11.821967
+asd123www: Running BFS 2
+Round: 0, state: 1, time: 0.482
+Round: 1, state: 1, time: 0.461
+Round: 2, state: 1, time: 0.115
+Round: 3, state: 1, time: 0.061
+Round: 4, state: 1, time: 0.030
+Round: 5, state: 1, time: 0.029
+Round: 6, state: 1, time: 0.028
+Time for BFS 2 is 1.206506
+TEPS for BFS 2 is 1.11242e+08
+Validating BFS 2
+Validate time for BFS 2 is 11.834510
+asd123www: Running BFS 3
+Round: 0, state: 1, time: 0.482
+Round: 1, state: 1, time: 0.477
+Round: 2, state: 1, time: 0.156
+Round: 3, state: 1, time: 0.073
+Round: 4, state: 1, time: 0.033
+Round: 5, state: 1, time: 0.029
+Round: 6, state: 1, time: 0.028
+Round: 7, state: 1, time: 0.029
+Time for BFS 3 is 1.308067
+TEPS for BFS 3 is 1.02605e+08
+Validating BFS 3
+Validate time for BFS 3 is 11.867399
+SCALE:                          23
+edgefactor:                     16
+NBFS:                           4
+graph_generation:               36.661
+num_mpi_processes:              2
+construction_time:              12.988
+bfs  min_time:                  0.982474
+bfs  firstquartile_time:        1.09449
+bfs  median_time:               1.25729
+bfs  thirdquartile_time:        1.34597
+bfs  max_time:                  1.38387
+bfs  mean_time:                 1.22023
+bfs  stddev_time:               0.174365
+min_nedge:                      134213828
+firstquartile_nedge:            134213828
+median_nedge:                   134213828
+thirdquartile_nedge:            134213828
+max_nedge:                      134213828
+mean_nedge:                     134213828
+stddev_nedge:                   0
+bfs  min_TEPS:                  9.69845e+07
+bfs  firstquartile_TEPS:        9.97155e+07
+bfs  median_TEPS:               1.06749e+08
+bfs  thirdquartile_TEPS:        1.22627e+08
+bfs  max_TEPS:                  1.36608e+08
+bfs  harmonic_mean_TEPS:     !  1.09991e+08
+bfs  harmonic_stddev_TEPS:      9.07429e+06
+bfs  min_validate:              11.8059
+bfs  firstquartile_validate:    11.814
+bfs  median_validate:           11.8282
+bfs  thirdquartile_validate:    11.851
+bfs  max_validate:              11.8674
+bfs  mean_validate:             11.8325
+bfs  stddev_validate:           0.0260638
