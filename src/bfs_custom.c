@@ -13,6 +13,8 @@
 #include <assert.h>
 #include <stdint.h>
 
+#include <immintrin.h>
+
 #define MIN(a,b) (((a)<(b))?(a):(b))
 
 // unsigned long居然是8byte...
@@ -69,12 +71,27 @@ void glb_visit_syn(int from, void* data, int sz) {
 	sz /= 8;
 	unsigned long* vi = data;
 	int offset = vi[sz - 1];
-	for (int i = 0; i < sz - 1; ++i) {
-		visited[i + offset] |= vi[i]; // SIMD??? wrong!!!
-	}
+	int i = 0;
+
+	// unsigned long addr1 = vi;
+	// unsigned long addr2 = visited + offset;
+	// if ((addr1 & 0x1Full) == (addr2 & 0x1Full)) {
+	// 	for (; addr1 & 0x1Full;) {
+	// 		visited[i + offset] |= vi[i];
+	// 		++i;
+	// 		addr1 = vi + i;
+	// 		addr2 = visited + offset + i;
+	// 	}
+	// 	for (; i + 4 < sz - 1; i += 4) {
+	// 		_mm256_storeu_si256(visited + offset + i,
+	// 							_mm256_or_si256(_mm256_load_si256(vi + i), _mm256_load_si256(visited + offset + i)));
+	// 	}
+	// }
+
+	for (; i < sz - 1; ++i) visited[i + offset] |= vi[i]; // SIMD??? wrong!!!
 }
 inline void send_glb_visit() {
-	int seg = 1200;
+	int seg = 1023;
 	for (int l = 0; l < visited_size; l += seg) {
 		int r = MIN(visited_size - 1, l + seg - 1);
 		unsigned long tmp = visited[r + 1];
@@ -84,6 +101,8 @@ inline void send_glb_visit() {
 		}
 		visited[r + 1] = tmp;
 	}
+	// printf("in bottom-up\n");
+	aml_barrier(); // 里面必须每一个depth栅栏同步一下.
 }
 
 
@@ -111,6 +130,7 @@ void top_down_naive() {
 	for(int i = 0; i < qc; i++)
 		for(int j = rowstarts[q1[i]]; j < rowstarts[q1[i]+1]; j++)
 			send_visit(COLUMN(j), q1[i]);
+	// printf("in top-down\n");
 	aml_barrier();
 }
 
@@ -127,11 +147,6 @@ void bottom_up_naive() {
 	}
 	for (int i = 0; i < q2c; ++i) SET_GLB_VISIT(VERTEX_TO_GLOBAL(rank, q2[i]));
 }
-
-void switch_state(int *state) {
-	
-}
-
 
 //user should provide this function which would be called several times to do kernel 2: breadth first search
 //pred[] should be root for root, -1 for unrechable vertices
@@ -164,15 +179,13 @@ void run_bfs(int64_t root, int64_t* pred) {
 		if (state == 0) { // beginning top-down.
 			top_down_naive();
 		} else if (state == 1) { // bottom-up.
+			send_glb_visit();
 			// if you want to use pure bottom-up, just set `state = 1` and don't change.
 			bottom_up_naive();
-			
 		} else { // ending top-down.
 			assert(state == 2);
 			top_down_naive();
 		}
-		send_glb_visit();
-		aml_barrier(); // 里面必须每一个depth栅栏同步一下.
 		qc = q2c, q2c = 0;
 		int *tmp = q1; q1 = q2; q2 = tmp;
 		sum = qc;
@@ -193,7 +206,7 @@ void run_bfs(int64_t root, int64_t* pred) {
 				if (!GET_GLB_VISIT(VERTEX_TO_GLOBAL(rank, i))) last_edge += rowstarts[i + 1] - rowstarts[i];
 			}
 			aml_long_allsum(&front_edge);
-			aml_long_allsum(&last_edge); 
+			aml_long_allsum(&last_edge);
 			state = front_edge * alpha > last_edge? 1: 0;
 		} else if (state == 1) {
 			state = sum * beta < g.nglobalverts? 2: 1;

@@ -26,14 +26,14 @@
 #define MAXGROUPS 65536		//number of nodes (core processes form a group on a same node)
 // wrong!!! 我本地做个拆分???
 // #define AGGR (1024*32) //aggregation buffer size per dest in bytes : internode
-#define AGGR (1<<20) //aggregation buffer size per dest in bytes : internode
+#define AGGR (1<<23) //aggregation buffer size per dest in bytes : internode
 // #define AGGR_intra (1024*32) //aggregation buffer size per dest in bytes : intranode
-#define AGGR_intra (1<<20) //aggregation buffer size per dest in bytes : intranode
+#define AGGR_intra (1<<23) //aggregation buffer size per dest in bytes : intranode
 
-#define NRECV 4 // number of preposted recvs internode
-#define NRECV_intra 4 // number of preposted recvs intranode
-#define NSEND 4 // number of available sends internode
-#define NSEND_intra 4 // number of send intranode
+#define NRECV 8 // number of preposted recvs internode
+#define NRECV_intra 8 // number of preposted recvs intranode
+#define NSEND 8 // number of available sends internode
+#define NSEND_intra 8 // number of send intranode
 #define SOATTR __attribute__((visibility("default")))
 
 #define SENDSOURCE(node) ( sendbuf+(AGGR*nbuf[node]))
