@@ -1,0 +1,817 @@
+graph_generation:               10.668041 s
+construction_time:              3.594654 s
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.005
+Round: 2, state: 1, time: 0.030
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+asd123www: Running BFS 0
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.005
+Round: 2, state: 1, time: 0.030
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 0 is 0.068053
+TEPS for BFS 0 is 1.9722e+09
+Validating BFS 0
+Validate time for BFS 0 is 3.918264
+asd123www: Running BFS 1
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.009
+Round: 3, state: 1, time: 0.026
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 1 is 0.069889
+TEPS for BFS 1 is 1.92038e+09
+Validating BFS 1
+Validate time for BFS 1 is 3.921812
+asd123www: Running BFS 2
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 2 is 0.073567
+TEPS for BFS 2 is 1.82438e+09
+Validating BFS 2
+Validate time for BFS 2 is 3.945004
+asd123www: Running BFS 3
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.030
+Round: 3, state: 1, time: 0.024
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 3 is 0.089535
+TEPS for BFS 3 is 1.499e+09
+Validating BFS 3
+Validate time for BFS 3 is 4.040644
+asd123www: Running BFS 4
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 4 is 0.073368
+TEPS for BFS 4 is 1.82932e+09
+Validating BFS 4
+Validate time for BFS 4 is 4.039335
+asd123www: Running BFS 5
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.012
+Round: 2, state: 1, time: 0.026
+Round: 3, state: 1, time: 0.014
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Time for BFS 5 is 0.070369
+TEPS for BFS 5 is 1.90729e+09
+Validating BFS 5
+Validate time for BFS 5 is 4.024899
+asd123www: Running BFS 6
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.027
+Round: 2, state: 1, time: 0.024
+Round: 3, state: 1, time: 0.013
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 6 is 0.083757
+TEPS for BFS 6 is 1.60241e+09
+Validating BFS 6
+Validate time for BFS 6 is 4.067574
+asd123www: Running BFS 7
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 7 is 0.073259
+TEPS for BFS 7 is 1.83205e+09
+Validating BFS 7
+Validate time for BFS 7 is 4.026423
+asd123www: Running BFS 8
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.061
+Round: 3, state: 1, time: 0.022
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.001
+Round: 6, state: 2, time: 0.000
+Time for BFS 8 is 0.106795
+TEPS for BFS 8 is 1.25674e+09
+Validating BFS 8
+Validate time for BFS 8 is 4.069290
+asd123www: Running BFS 9
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.009
+Round: 3, state: 1, time: 0.028
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 9 is 0.072140
+TEPS for BFS 9 is 1.86046e+09
+Validating BFS 9
+Validate time for BFS 9 is 4.046626
+asd123www: Running BFS 10
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.008
+Round: 2, state: 1, time: 0.031
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.011
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 10 is 0.071894
+TEPS for BFS 10 is 1.86683e+09
+Validating BFS 10
+Validate time for BFS 10 is 4.073390
+asd123www: Running BFS 11
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.069
+Round: 3, state: 1, time: 0.022
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 11 is 0.115288
+TEPS for BFS 11 is 1.16417e+09
+Validating BFS 11
+Validate time for BFS 11 is 4.034234
+asd123www: Running BFS 12
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 12 is 0.072414
+TEPS for BFS 12 is 1.85343e+09
+Validating BFS 12
+Validate time for BFS 12 is 4.056411
+asd123www: Running BFS 13
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 13 is 0.070216
+TEPS for BFS 13 is 1.91145e+09
+Validating BFS 13
+Validate time for BFS 13 is 4.019289
+asd123www: Running BFS 14
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 14 is 0.072715
+TEPS for BFS 14 is 1.84576e+09
+Validating BFS 14
+Validate time for BFS 14 is 4.070698
+asd123www: Running BFS 15
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.007
+Round: 3, state: 1, time: 0.027
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 15 is 0.069750
+TEPS for BFS 15 is 1.9242e+09
+Validating BFS 15
+Validate time for BFS 15 is 4.019417
+asd123www: Running BFS 16
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.009
+Round: 2, state: 1, time: 0.028
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 16 is 0.070431
+TEPS for BFS 16 is 1.90561e+09
+Validating BFS 16
+Validate time for BFS 16 is 4.065905
+asd123www: Running BFS 17
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.008
+Round: 2, state: 1, time: 0.029
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 17 is 0.069772
+TEPS for BFS 17 is 1.9236e+09
+Validating BFS 17
+Validate time for BFS 17 is 4.008794
+asd123www: Running BFS 18
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 18 is 0.072529
+TEPS for BFS 18 is 1.85048e+09
+Validating BFS 18
+Validate time for BFS 18 is 4.060797
+asd123www: Running BFS 19
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.010
+Round: 3, state: 1, time: 0.027
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 19 is 0.072749
+TEPS for BFS 19 is 1.84489e+09
+Validating BFS 19
+Validate time for BFS 19 is 4.023720
+asd123www: Running BFS 20
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.006
+Round: 2, state: 1, time: 0.029
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 20 is 0.067857
+TEPS for BFS 20 is 1.97791e+09
+Validating BFS 20
+Validate time for BFS 20 is 4.046007
+asd123www: Running BFS 21
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.001
+Round: 3, state: 1, time: 0.035
+Round: 4, state: 1, time: 0.018
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 21 is 0.073988
+TEPS for BFS 21 is 1.81398e+09
+Validating BFS 21
+Validate time for BFS 21 is 4.043231
+asd123www: Running BFS 22
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.017
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 22 is 0.070737
+TEPS for BFS 22 is 1.89735e+09
+Validating BFS 22
+Validate time for BFS 22 is 4.039783
+asd123www: Running BFS 23
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 23 is 0.072428
+TEPS for BFS 23 is 1.85306e+09
+Validating BFS 23
+Validate time for BFS 23 is 4.011903
+asd123www: Running BFS 24
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.011
+Round: 2, state: 1, time: 0.026
+Round: 3, state: 1, time: 0.014
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 24 is 0.069971
+TEPS for BFS 24 is 1.91815e+09
+Validating BFS 24
+Validate time for BFS 24 is 4.038255
+asd123www: Running BFS 25
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 25 is 0.072302
+TEPS for BFS 25 is 1.8563e+09
+Validating BFS 25
+Validate time for BFS 25 is 4.029248
+asd123www: Running BFS 26
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.060
+Round: 3, state: 1, time: 0.022
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.001
+Round: 6, state: 2, time: 0.000
+Time for BFS 26 is 0.106570
+TEPS for BFS 26 is 1.25939e+09
+Validating BFS 26
+Validate time for BFS 26 is 4.046951
+asd123www: Running BFS 27
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.020
+Round: 2, state: 1, time: 0.028
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Time for BFS 27 is 0.081162
+TEPS for BFS 27 is 1.65365e+09
+Validating BFS 27
+Validate time for BFS 27 is 4.043794
+asd123www: Running BFS 28
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.012
+Round: 3, state: 1, time: 0.026
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 28 is 0.072930
+TEPS for BFS 28 is 1.84032e+09
+Validating BFS 28
+Validate time for BFS 28 is 4.050610
+asd123www: Running BFS 29
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.003
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.017
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 29 is 0.071955
+TEPS for BFS 29 is 1.86525e+09
+Validating BFS 29
+Validate time for BFS 29 is 4.039374
+asd123www: Running BFS 30
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.028
+Round: 2, state: 1, time: 0.024
+Round: 3, state: 1, time: 0.013
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Time for BFS 30 is 0.084836
+TEPS for BFS 30 is 1.58203e+09
+Validating BFS 30
+Validate time for BFS 30 is 4.033716
+asd123www: Running BFS 31
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 31 is 0.071809
+TEPS for BFS 31 is 1.86905e+09
+Validating BFS 31
+Validate time for BFS 31 is 4.039689
+asd123www: Running BFS 32
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.007
+Round: 2, state: 1, time: 0.030
+Round: 3, state: 1, time: 0.015
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 32 is 0.071271
+TEPS for BFS 32 is 1.88315e+09
+Validating BFS 32
+Validate time for BFS 32 is 4.019241
+asd123www: Running BFS 33
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 33 is 0.071265
+TEPS for BFS 33 is 1.88331e+09
+Validating BFS 33
+Validate time for BFS 33 is 4.038683
+asd123www: Running BFS 34
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.069
+Round: 2, state: 1, time: 0.022
+Round: 3, state: 1, time: 0.012
+Round: 4, state: 2, time: 0.001
+Round: 5, state: 2, time: 0.000
+Time for BFS 34 is 0.113358
+TEPS for BFS 34 is 1.18398e+09
+Validating BFS 34
+Validate time for BFS 34 is 4.045341
+asd123www: Running BFS 35
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 35 is 0.071813
+TEPS for BFS 35 is 1.86893e+09
+Validating BFS 35
+Validate time for BFS 35 is 4.062424
+asd123www: Running BFS 36
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.013
+Round: 3, state: 1, time: 0.026
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 36 is 0.074306
+TEPS for BFS 36 is 1.80623e+09
+Validating BFS 36
+Validate time for BFS 36 is 4.016007
+asd123www: Running BFS 37
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.006
+Round: 2, state: 1, time: 0.032
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 37 is 0.071517
+TEPS for BFS 37 is 1.87667e+09
+Validating BFS 37
+Validate time for BFS 37 is 4.061842
+asd123www: Running BFS 38
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 38 is 0.069631
+TEPS for BFS 38 is 1.9275e+09
+Validating BFS 38
+Validate time for BFS 38 is 4.013448
+asd123www: Running BFS 39
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.006
+Round: 3, state: 1, time: 0.030
+Round: 4, state: 1, time: 0.015
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 39 is 0.072191
+TEPS for BFS 39 is 1.85914e+09
+Validating BFS 39
+Validate time for BFS 39 is 4.069543
+asd123www: Running BFS 40
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.018
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 40 is 0.072679
+TEPS for BFS 40 is 1.84666e+09
+Validating BFS 40
+Validate time for BFS 40 is 4.006642
+asd123www: Running BFS 41
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.036
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 41 is 0.076025
+TEPS for BFS 41 is 1.7654e+09
+Validating BFS 41
+Validate time for BFS 41 is 4.066478
+asd123www: Running BFS 42
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 42 is 0.072494
+TEPS for BFS 42 is 1.85137e+09
+Validating BFS 42
+Validate time for BFS 42 is 4.023940
+asd123www: Running BFS 43
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.020
+Round: 3, state: 1, time: 0.025
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.013
+Round: 6, state: 2, time: 0.000
+Time for BFS 43 is 0.080873
+TEPS for BFS 43 is 1.65955e+09
+Validating BFS 43
+Validate time for BFS 43 is 4.071673
+asd123www: Running BFS 44
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.063
+Round: 2, state: 1, time: 0.022
+Round: 3, state: 1, time: 0.012
+Round: 4, state: 2, time: 0.000
+Round: 5, state: 2, time: 0.000
+Time for BFS 44 is 0.107163
+TEPS for BFS 44 is 1.25242e+09
+Validating BFS 44
+Validate time for BFS 44 is 4.034875
+asd123www: Running BFS 45
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 45 is 0.073230
+TEPS for BFS 45 is 1.83276e+09
+Validating BFS 45
+Validate time for BFS 45 is 4.051377
+asd123www: Running BFS 46
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.012
+Round: 3, state: 1, time: 0.026
+Round: 4, state: 1, time: 0.014
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 46 is 0.074281
+TEPS for BFS 46 is 1.80684e+09
+Validating BFS 46
+Validate time for BFS 46 is 4.010901
+asd123www: Running BFS 47
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.024
+Round: 3, state: 1, time: 0.024
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Round: 7, state: 2, time: 0.000
+Time for BFS 47 is 0.082240
+TEPS for BFS 47 is 1.63198e+09
+Validating BFS 47
+Validate time for BFS 47 is 4.049311
+asd123www: Running BFS 48
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.013
+Round: 2, state: 1, time: 0.026
+Round: 3, state: 1, time: 0.014
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 48 is 0.071425
+TEPS for BFS 48 is 1.87909e+09
+Validating BFS 48
+Validate time for BFS 48 is 4.004975
+asd123www: Running BFS 49
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.020
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 49 is 0.074027
+TEPS for BFS 49 is 1.81304e+09
+Validating BFS 49
+Validate time for BFS 49 is 4.045551
+asd123www: Running BFS 50
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 1, time: 0.037
+Round: 3, state: 1, time: 0.021
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 50 is 0.076797
+TEPS for BFS 50 is 1.74764e+09
+Validating BFS 50
+Validate time for BFS 50 is 4.013209
+asd123www: Running BFS 51
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 51 is 0.071817
+TEPS for BFS 51 is 1.86883e+09
+Validating BFS 51
+Validate time for BFS 51 is 4.016122
+asd123www: Running BFS 52
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 52 is 0.073526
+TEPS for BFS 52 is 1.8254e+09
+Validating BFS 52
+Validate time for BFS 52 is 4.013982
+asd123www: Running BFS 53
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.017
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 53 is 0.070611
+TEPS for BFS 53 is 1.90074e+09
+Validating BFS 53
+Validate time for BFS 53 is 4.018221
+asd123www: Running BFS 54
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.063
+Round: 3, state: 1, time: 0.022
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 54 is 0.108806
+TEPS for BFS 54 is 1.23351e+09
+Validating BFS 54
+Validate time for BFS 54 is 4.029472
+asd123www: Running BFS 55
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.005
+Round: 2, state: 1, time: 0.032
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 55 is 0.070565
+TEPS for BFS 55 is 1.90198e+09
+Validating BFS 55
+Validate time for BFS 55 is 4.004461
+asd123www: Running BFS 56
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.066
+Round: 3, state: 1, time: 0.022
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 56 is 0.112461
+TEPS for BFS 56 is 1.19343e+09
+Validating BFS 56
+Validate time for BFS 56 is 4.044115
+asd123www: Running BFS 57
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 57 is 0.071810
+TEPS for BFS 57 is 1.86901e+09
+Validating BFS 57
+Validate time for BFS 57 is 4.011424
+asd123www: Running BFS 58
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.001
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.019
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 58 is 0.072257
+TEPS for BFS 58 is 1.85746e+09
+Validating BFS 58
+Validate time for BFS 58 is 4.026201
+asd123www: Running BFS 59
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.035
+Round: 3, state: 1, time: 0.017
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 59 is 0.072555
+TEPS for BFS 59 is 1.84983e+09
+Validating BFS 59
+Validate time for BFS 59 is 4.031179
+asd123www: Running BFS 60
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.000
+Round: 2, state: 0, time: 0.032
+Round: 3, state: 1, time: 0.024
+Round: 4, state: 1, time: 0.013
+Round: 5, state: 1, time: 0.012
+Round: 6, state: 2, time: 0.000
+Time for BFS 60 is 0.091333
+TEPS for BFS 60 is 1.46949e+09
+Validating BFS 60
+Validate time for BFS 60 is 4.067599
+asd123www: Running BFS 61
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.017
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 61 is 0.072164
+TEPS for BFS 61 is 1.85985e+09
+Validating BFS 61
+Validate time for BFS 61 is 4.011800
+asd123www: Running BFS 62
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.061
+Round: 2, state: 1, time: 0.022
+Round: 3, state: 1, time: 0.012
+Round: 4, state: 2, time: 0.001
+Round: 5, state: 2, time: 0.000
+Time for BFS 62 is 0.105491
+TEPS for BFS 62 is 1.27227e+09
+Validating BFS 62
+Validate time for BFS 62 is 4.062197
+asd123www: Running BFS 63
+Round: 0, state: 0, time: 0.000
+Round: 1, state: 0, time: 0.002
+Round: 2, state: 1, time: 0.034
+Round: 3, state: 1, time: 0.016
+Round: 4, state: 1, time: 0.012
+Round: 5, state: 2, time: 0.000
+Round: 6, state: 2, time: 0.000
+Time for BFS 63 is 0.069595
+TEPS for BFS 63 is 1.9285e+09
+Validating BFS 63
+Validate time for BFS 63 is 4.004147
+SCALE:                          23
+edgefactor:                     16
+NBFS:                           64
+graph_generation:               10.668
+num_mpi_processes:              8
+construction_time:              3.59465
+bfs  min_time:                  0.0678566
+bfs  firstquartile_time:        0.0713478
+bfs  median_time:               0.0725118
+bfs  thirdquartile_time:        0.0764109
+bfs  max_time:                  0.115288
+bfs  mean_time:                 0.0780408
+bfs  stddev_time:               0.0128521
+min_nedge:                      134213828
+firstquartile_nedge:            134213828
+median_nedge:                   134213828
+thirdquartile_nedge:            134213828
+max_nedge:                      134213828
+mean_nedge:                     134213828
+stddev_nedge:                   0
+bfs  min_TEPS:                  1.16417e+09
+bfs  firstquartile_TEPS:        1.75648e+09
+bfs  median_TEPS:               1.85092e+09
+bfs  thirdquartile_TEPS:        1.88112e+09
+bfs  max_TEPS:                  1.97791e+09
+bfs  harmonic_mean_TEPS:     !  1.71979e+09
+bfs  harmonic_stddev_TEPS:      3.56828e+07
+bfs  min_validate:              3.91826
+bfs  firstquartile_validate:    4.01606
+bfs  median_validate:           4.03656
+bfs  thirdquartile_validate:    4.04996
+bfs  max_validate:              4.07339
+bfs  mean_validate:             4.0319
+bfs  stddev_validate:           0.0307776
+/var/slurm/d/job160237/slurm_script: line 10: SBATCH: command not found

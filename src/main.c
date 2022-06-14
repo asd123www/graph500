@@ -165,7 +165,7 @@ int main(int argc, char** argv) {
 	/* Make the raw graph edges. */
 	/* Get roots for BFS runs, plus maximum vertex with non-zero degree (used by
 	 * validator). */
-	int num_bfs_roots = 4; // 验证次数, 次数更多则统计误差更小.
+	int num_bfs_roots = 64; // 验证次数, 次数更多则统计误差更小.
 	int64_t* bfs_roots = (int64_t*)xmalloc(num_bfs_roots * sizeof(int64_t));
 
 	double make_graph_start = MPI_Wtime();
