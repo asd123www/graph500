@@ -16,15 +16,20 @@
 
 **1.** 每一层点的个数:
 
-<img src="[point-number](https://github.com/asd123www/graph500/blob/master/report/point-number.jpg)" alt="point-number" style="zoom:60%;" />
+![Alt text](point-number.jpg)
+
+<!-- <img src="[point-number](https://github.com/asd123www/graph500/blob/master/report/point-number.jpg)" alt="point-number" style="zoom:60%;" /> -->
 
 **2.** 传统每一层`top-down`算法每一层需要判断的边数.
 
-<img src="[edge-valid-total](https://github.com/asd123www/graph500/blob/master/report/edge-valid-total.jpg)" alt="edge-valid-total" style="zoom:60%;" />
+![Alt text](edge-valid-total.jpg)
+<!-- <img src="[edge-valid-total](https://github.com/asd123www/graph500/blob/master/report/edge-valid-total.jpg)" alt="edge-valid-total" style="zoom:60%;" /> -->
 
 **3.** `top-down`算法每一层耗时统计.
 
-<img src="[time](https://github.com/asd123www/graph500/blob/master/report/time.jpg)" alt="time" style="zoom:60%;" />
+
+![Alt text](time.jpg)
+<!-- <img src="[time](https://github.com/asd123www/graph500/blob/master/report/time.jpg)" alt="time" style="zoom:60%;" /> -->
 
 通过观察图1, 我们确定`graph 500`的图生成算法满足原论文中要求的图性质, 因此实现`bottom-up`算法是合理的.
 
@@ -90,7 +95,9 @@ for (int i = 0; i < q2c; ++i) SET_GLB_VISIT(VERTEX_TO_GLOBAL(rank, q2[i]));
 
 ### Performance
 
-<img src="[perf-contrast](https://github.com/asd123www/graph500/blob/master/report/contrast.jpg)" alt="contrast" style="zoom:72%;" />
+![Alt text](contrast.jpg)
+<!-- 
+<img src="[perf-contrast](https://github.com/asd123www/graph500/blob/master/report/contrast.jpg)" alt="contrast" style="zoom:72%;" /> -->
 
 上图是`top-down`算法和`bottom-up`算法在每个阶段的性能对比, 不难发现两个算法有互补性(验证了论文中的论断). 即在初始`stage`, 由于点数很少, 同时`bottom-up`算法需要检查大量未访问的点, 因此更适合使用`top-down`算法. 而在中间阶段, 大量的边需要被检查, 因此使用`bottom-up`算法会更优. 在最后几个`stage`, 由于生成图算法的随机性, 整个图所有节点并非两两连通, 因此此时`bottom-up`算法性能由于这些不在一个连通块中的节点产生损耗.
 
@@ -100,7 +107,8 @@ for (int i = 0; i < q2c; ++i) SET_GLB_VISIT(VERTEX_TO_GLOBAL(rank, q2[i]));
 
 实现的状态转移参考了论文中的有限状态自动机, 但是我实现了简单版本, 即从`bottom-up`切换到`top-down`永远保持`top-down`状态. 实现的难点主要在于如何统计状态转移需要的信息, 以及选择合适的超参数.
 
-<img src="[hybrid-state](https://github.com/asd123www/graph500/blob/master/report/hybrid-state.png)" alt="hybrid-state" style="zoom:50%;" />
+![Alt text](hybrid-state.png)
+<!-- <img src="[hybrid-state](https://github.com/asd123www/graph500/blob/master/report/hybrid-state.png)" alt="hybrid-state" style="zoom:50%;" /> -->
 
 
 
@@ -141,7 +149,8 @@ if (state == 0) {
 
 **alpha-tuning**: 这里只展示`alpha`的性能图, `beta`的调整过程完全相同.
 
-<img src="[alpha-tune](https://github.com/asd123www/graph500/blob/master/report/alpha-tune.jpg)" alt="alpha-tune" style="zoom:72%;" />
+![Alt text](alpha-tune.jpg)
+<!-- <img src="[alpha-tune](https://github.com/asd123www/graph500/blob/master/report/alpha-tune.jpg)" alt="alpha-tune" style="zoom:72%;" /> -->
 
 如图所示我们不难看出`alpha = 13`是一个分界点, 即导致了`top-down`和`bottom-up`算法的切换. 而在大部分情况下由于不发生算法的切换, 因此性能图较为平坦.
 
@@ -206,7 +215,9 @@ for (int j = rowstarts[i]; j < rowstarts[i+1]; j++) { // 有重边...
 | **4**            | 2.5586       | 0.624221      | 0.119508   |
 | **8**            | 1.36046      | 0.359567      | 0.0752094  |
 
-<img src="[scale-contrast](https://github.com/asd123www/graph500/blob/master/report/scale-contrast.jpg)" alt="scale-contrast" style="zoom:72%;" />
+
+![Alt text](scale-contrast.jpg)
+<!-- <img src="[scale-contrast](https://github.com/asd123www/graph500/blob/master/report/scale-contrast.jpg)" alt="scale-contrast" style="zoom:72%;" /> -->
 
 ### Pure Performance
 
@@ -220,7 +231,9 @@ for (int j = rowstarts[i]; j < rowstarts[i+1]; j++) { // 有重边...
 | **(24, 16)** | 2.82894      | 0.782756      | 0.154498   |
 
 
-<img src="[algo-contrast](https://github.com/asd123www/graph500/blob/master/report/algo-contrast.jpg)" alt="algo-contrast" style="zoom:72%;" />
+
+![Alt text](algo-contrast.jpg)
+<!-- <img src="[algo-contrast](https://github.com/asd123www/graph500/blob/master/report/algo-contrast.jpg)" alt="algo-contrast" style="zoom:72%;" /> -->
 
 
 
